@@ -1,11 +1,11 @@
 void main() {
-  listen();
+  listening();
 }
 
-void listen() async {
-  getNumbers().expand((data) => [data, data * 5]).listen((data) {
-    print(data);
-  });
+void listening() async {
+  getNumbers()
+      .expand((data) => [data, data * 5])
+      .listen((data) => print("Voici ==> $data"));
 }
 
 Stream<int> getNumbers() async* {
