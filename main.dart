@@ -3,9 +3,11 @@ void main() {
 }
 
 void listening() async {
-  getNumbers()
-      .expand((data) => [data, data * 5])
-      .listen((data) => print("Voici ==> $data"));
+  // getNumbers()
+  //     .expand((data) => [data, data * 5])
+  //     .listen((data) => print("Voici ==> $data"));
+
+  getNumbers().map((i) => (i * 5)).listen((data) => print(data));
 }
 
 Stream<int> getNumbers() async* {
