@@ -9,11 +9,12 @@ void main() {
   });
 
   out.listen((data) {
-    print(data.replaceAll("e", "Y"));
+    print(data.replaceAll("e", ">"));
   });
+
   add();
 }
 
 void add() {
-  _controller.sink.add("Teeeest Chaine");
+  _controller.sink.add("Teeeeeeest");
 }
