@@ -9,12 +9,10 @@ void main() {
   });
 
   out.listen((data) {
-    print(data.replaceAll("e", ">"));
+    print(data.replaceAll("a", "A"));
   });
-
-  add();
 }
 
 void add() {
-  _controller.sink.add("Teeeeeeest");
+  _controller.sink.add("aaaaa dd");
 }
