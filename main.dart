@@ -17,8 +17,10 @@ void main() {
   // print("Index $index");
   // print("Le nombre est pair $isPair");
 
-  browseList();
-  print(browseList());
+  // browseList();
+  // print(browseList());
+
+  validateNumber("80");
 }
 
 void add() {
@@ -33,4 +35,14 @@ int browseList() {
   }
   print(data);
   return status;
+}
+
+void validateNumber(String num) {
+  List<String> data = ["999", "97", "84", "81", "85", "89"];
+  print(data.every((v) => v != num));
+  if (data.every((v) => v != num)) {
+    print("$num Ce numero est invalide pour la RDC");
+  } else {
+    print("$num Ce numero est valide a 100%");
+  }
 }
