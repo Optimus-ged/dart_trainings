@@ -20,7 +20,7 @@ void main() {
   // browseList();
   // print(browseList());
 
-  validateNumber("80");
+  validateNumber("+243811945367");
 }
 
 void add() {
@@ -38,11 +38,11 @@ int browseList() {
 }
 
 void validateNumber(String num) {
-  List<String> data = ["999", "97", "84", "81", "85", "89"];
-  print(data.every((v) => v != num));
-  if (data.every((v) => v != num)) {
-    print("$num Ce numero est invalide pour la RDC");
-  } else {
+  String val = num.substring(4, 6);
+  List<String> data = ["999", "97", "84", "81", "85", "89","99"];
+  if (!data.every((v) => v != val)) {
     print("$num Ce numero est valide a 100%");
+  } else {
+    print("$num Ce numero est invalide pour la RDC");
   }
 }
